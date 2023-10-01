@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../../../data/constants/color.dart';
@@ -15,7 +14,6 @@ class GetstartedView extends GetView<GetstartedController> {
   const GetstartedView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -49,9 +47,14 @@ class GetstartedView extends GetView<GetstartedController> {
           const SizedBox(
             height: 20,
           ),
-          ButtonWid(
-            press: () => Get.offAndToNamed(Routes.login),
-            text: 'Login',
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+            ),
+            child: ButtonWid(
+              press: () => Get.offAndToNamed(Routes.login),
+              text: 'Started',
+            ),
           ),
         ],
       ),
